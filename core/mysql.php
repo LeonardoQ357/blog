@@ -153,7 +153,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
             $nome_campo = $nome_campo . '_' . rand();
         }
 
-        $campos_criterio[] = $nome campo;
+        $campos_criterio[] = $nome_campo;
 
         $$nome_campo = $dado;
     }
@@ -183,7 +183,7 @@ function buscar(string $entidade, array $campos = ['*'], array $criterio = [], s
 
     $_SESSION['errors'] = mysqli_stmt_error_list($stmt);
 
-    mysqli_stmt_clsoe($stmt);
+    mysqli_stmt_close($stmt);
 
     desconecta($conexao);
 
