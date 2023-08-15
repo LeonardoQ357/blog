@@ -5,10 +5,15 @@
     require_once '../core/sql.php';
 
     insert_teste('8','Passou','5','1');
+    echo "<br>";
     select_teste();
+    echo "<br>";
     update_teste(2,'5','Nao passou');
+    echo "<br>";
     select_teste();
+    echo "<br>";
     delete_teste(2);
+    echo "<br>";
     select_teste();
 
 
@@ -32,7 +37,7 @@
     }
 
     function delete_teste($id) : void
-    {
+    {   
         $criterio = [['id', '=', $id]];
         deleta('avaliacao', $criterio);
     }
