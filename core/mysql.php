@@ -15,7 +15,8 @@ function insere (string $entidade, array $dados) : bool
 
     $stmt = mysqli_prepare($conexao, $instrucao);
 
-    eval('mysqli_stmt_bind_param($stmt, \'' . implode('',$tipo) . '\',$' . implode(', $', array_keys($dados)) . ');');
+    eval('mysqli_stmt_bind_param($stmt, \'' . implode('',$tipo) . '\',$'
+    . implode(', $', array_keys($dados)) . ');');
 
     mysqli_stmt_execute($stmt);
 
