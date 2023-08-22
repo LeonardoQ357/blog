@@ -120,6 +120,6 @@
             exit;
             break;
     }
-    
+
     header('Location: ../index.php')
 ?>
