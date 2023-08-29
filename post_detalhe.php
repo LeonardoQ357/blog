@@ -23,8 +23,8 @@
             ['id', '=', $post]
         ]
         );
-        $post = $post[0];
-        $data_post = data_create($post['data_postagem']);
+        $post = $posts[0];
+        $data_post = date_create($post['data_postagem']);
         $data_post = date_format($data_post, 'd/m/Y H:i:s');
 ?>
 <html>
