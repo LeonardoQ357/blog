@@ -66,6 +66,7 @@
                     if(!empty($_SESSION['url_retorno'])){
                         header('Location: '. $_SESSION['url_retorno']);
                         $_SESSION['url_retorno'] = '';
+                        exit;
                     }
                 }
             }
