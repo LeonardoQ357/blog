@@ -65,7 +65,7 @@
                             <td>E-mail</td>
                             <td>Data cadastro</td>
                             <td>Ativo</td>
-                            <td>Administrado</td>
+                            <td>Administrador</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -78,7 +78,8 @@
                             <td><?php echo $entidade['nome'] ?></td>
                             <td><?php echo $entidade['email'] ?></td>
                             <td><?php echo $data ?></td>
-                            <td><a href="core/usuario_repositorio.php?acao=status&id=<?php echo $entidade['id']?>&valor=<?php echo !$entidade['ativo']?>"><?php echo ($entidade['adm']==1) ? 'Rebaixar' : 'Promover'; ?></a></td>
+                            <td><a href="core/usuario_repositorio.php?acao=status&id=<?php echo $entidade['id']?>&valor=<?php echo !$entidade['ativo']?>"><?php echo ($entidade['ativo']==1) ? 'Desativar' : 'Ativar'; ?></a></td>
+                            <td><a href="core/usuario_repositorio.php?acao=adm&id=<?php echo $entidade['id']?>&valor=<?php echo !$entidade['ativo']?>"><?php echo ($entidade['adm']==1) ? 'Rebaixar' : 'Promover'; ?></a></td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
