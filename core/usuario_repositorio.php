@@ -77,7 +77,7 @@
             session_destroy();
             break;
 
-        case 'starus':
+        case 'status':
             $id = (int)$id;
             $valor = (int)$valor;
 
